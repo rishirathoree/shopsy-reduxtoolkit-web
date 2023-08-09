@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin {
+    animation: spin 3s linear infinite;
+}
+
+.bounce-effect{
+    transition: all 700ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+.h-calc{
+    height: calc(100vh - 64px);
+}
+
+.noscroll::-webkit-scrollbar{
+    display: none;
+}
+
+.transition-height {
+    transition: height 0.3s ease-in-out; /* Adjust the duration and easing as needed */
+  }
