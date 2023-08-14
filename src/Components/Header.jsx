@@ -1,34 +1,27 @@
 import React, { useEffect, useRef } from 'react'
-import logo from '../assets/logo1.png'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import Cart from './Cart'
-import SearchFromHeader from './SearchFromHeader'
 
 const Header = () => {
-    const navs = ['Cart','About','FAQ']
+    const navs = ['Shop','Support']
     // const divRef = useRef()
     // useEffect(()=>{console.log(divRef.current.offsetHeight)},[])
 
   return (
     <>
-    <div className='px-20 z-[100] shadow-sm bg-white fixed top-0 right-0 w-full py-4 flex items-center justify-between'>
-        <div className='flex items-center space-x-2'>
-            <NavLink to="/"><span><img src={logo} className='w-8 h-8' alt="" /></span></NavLink>
-        </div>
-        <SearchFromHeader />
+    <div className='flex items-center space-x-8 justify-evenly p-2'>
+        <Link to="/"><span><i className='bx bxl-apple'></i></span></Link>
+        {/* <ul className='flex items-center space-x-8'>
+            {navs.map((item,idx)=>{
+                return(
+                    <Link to={item}><li><p className='font-[300] text-[12px]'>{item}</p></li></Link>
+                )
+            })}
+        </ul>
         <div className='flex items-center space-x-4'>
+        <Link to='/cart'><li className='list-none'><p className='font-[300] text-[12px]'>Cart</p></li></Link>
         <Cart />
-        <nav>
-            <ul className='flex items-center space-x-4'>
-                {navs.map((item,idx)=>{
-                    return(
-                        <NavLink to={`/${item}`}><li><p className='cursor-pointer peer peer-hover:before:block before:content-[""] font-semibold text-gray-800 relative text-[10px] before:hidden  before:w-full before::hover:block before:-bottom-1 before:h-[2px] before:absolute before:bg-black'>{item}</p></li></NavLink>
-                    )
-                })}
-            </ul>
-        </nav>
-        </div>
-        
+        </div> */}
     </div>
     </>
   )
